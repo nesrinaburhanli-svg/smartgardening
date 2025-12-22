@@ -1,239 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Gardening Picks</title>
-  <style>
-    :root{
-      --bg:#0f172a; /* slate-900 */
-      --card:#111827; /* gray-900 */
-      --accent:#22c55e; /* green-500 */
-      --muted:#9ca3af; /* gray-400 */
-      --text:#e5e7eb; /* gray-200 */
-      --btn:#16a34a; /* green-600 */
-      --btn2:#0ea5e9; /* sky-500 */
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#020617;color:var(--text)}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;margin-bottom:32px}
-    .hero-card{background:linear-gradient(135deg,#052e16,#022c22);border-radius:20px;padding:28px;box-shadow:0 20px 40px rgba(0,0,0,.35)}
-    .hero h1{font-size:38px;line-height:1.1;margin:0 0 12px}
-    .hero p{color:#d1fae5;font-size:18px;margin:0 0 18px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{background:var(--btn);padding:12px 18px;border-radius:12px;font-weight:700}
-    .btn.secondary{background:#064e3b}
-    .note{color:#bbf7d0;font-size:13px;margin-top:12px}
-
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:560px){.grid{grid-template-columns:1fr}}
-
-    .card{background:radial-gradient(1200px 400px at 0% 0%,#020617,#020617),var(--card);border-radius:18px;padding:18px;box-shadow:0 12px 28px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:10px}
-    .badge{display:inline-block;background:#064e3b;color:#a7f3d0;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700;width:max-content}
-    .card h3{margin:6px 0 0;font-size:20px}
-    .card p{margin:0;color:var(--muted);font-size:14px}
-    .card .actions{margin-top:auto;display:flex;gap:10px}
-    .buy{background:var(--btn2);padding:10px 14px;border-radius:12px;font-weight:700}
-    .learn{background:#020617;border:1px solid #1f2937;padding:10px 14px;border-radius:12px}
-
-    .section{margin:34px 0}
-    .section h2{font-size:28px;margin:0 0 14px}
-
-    .disclosure{background:#020617;border:1px dashed #1f2937;border-radius:12px;padding:14px;color:#9ca3af;font-size:13px}
-
-    .footer{margin-top:40px;border-top:1px solid #1f2937;padding-top:18px;color:#9ca3af;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  </style>
+<meta charset="UTF-8">
+<title>Smart Gardening Picks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Beginner-friendly gardening guides and smart gardening education.">
+<style>
+:root{
+  --bg:#020617;--card:#111827;--accent:#22c55e;
+  --text:#e5e7eb;--muted:#9ca3af;
+}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.wrap{max-width:1000px;margin:auto;padding:32px}
+.card{background:var(--card);border-radius:18px;padding:24px;margin-bottom:24px}
+h1,h2{color:#bbf7d0}
+a{color:var(--accent);text-decoration:none}
+footer{border-top:1px solid #1f2937;padding-top:20px;font-size:13px;color:var(--muted)}
+ul{line-height:1.7}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-card">
-        <h1>Smarter Gardening, Better Harvests 🌱</h1>
-        <p>Curated tools, soil helpers, and smart irrigation picks for beginners and pros. Updated weekly.</p>
-        <div class="cta">
-          <a class="btn" href="#best-tools">Best Tools</a>
-          <a class="btn secondary" href="#watering">Watering</a>
-          <a class="btn secondary" href="#soil">Soil & Compost</a>
-        </div>
-        <div class="note">Fast, honest picks • No fluff • Amazon Prime-friendly</div>
-      </div>
-      <div class="card">
-        <span class="badge">Editor's Tip</span>
-        <h3>Start with the essentials</h3>
-        <p>Quality pruners, breathable gloves, and a reliable hose save time and plants.</p>
-        <div class="actions">
-          <a class="buy" href="https://www.amazon.com/s?k=garden+pruners+top&crid=3V57URTRAZXFK&sprefix=garden+pruners+top%2Caps%2C282&ref=nb_sb_noss_2" target="_blank" rel="nofollow sponsored">See Top Pruners</a>
-          <a class="learn" href="#disclosure">Disclosure</a>
-        </div>
-      </div>
-    </section>
+<div class="wrap">
 
-    <!-- BEST TOOLS -->
-    <section id="best-tools" class="section">
-      <h2>Best Gardening Tools</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="badge">Best Seller</span>
-          <h3>Bypass Pruning Shears</h3>
-          <p>Sharp, rust-resistant blades for clean cuts on roses and shrubs.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B09GYS5WBK/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B09GYS5WBK/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="badge">Editor's Pick</span>
-          <h3>Breathable Garden Gloves</h3>
-          <p>Grip, thorn protection, and comfort for long sessions.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B083S71GXY/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B083S71GXY/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="badge">Heavy Duty</span>
-          <h3>Steel Hand Trowel</h3>
-          <p>Balanced weight for digging and transplanting.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B0DK2F7TKF/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B0DK2F7TKF/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="card">
+<h1>Smarter Gardening, Better Harvests 🌱</h1>
+<p>
+Gardening isn’t about buying more tools — it’s about using the right ones,
+the right way.
+</p>
+<p>
+<strong>Smart Gardening Picks</strong> helps beginner and home gardeners grow
+healthier plants through practical guides, clear explanations, and honest advice.
+</p>
+</div>
 
-    <!-- WATERING -->
-    <section id="watering" class="section">
-      <h2>Watering & Irrigation</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="badge">Smart Choice</span>
-          <h3>Expandable Garden Hose</h3>
-          <p>Lightweight, kink-free, and space-saving.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B0FF6X2TXS/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B0FF6X2TXS/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="badge">Save Water</span>
-          <h3>Drip Irrigation Kit</h3>
-          <p>Targeted watering for raised beds and greenhouses.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B01H6ZN0NU/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B01H6ZN0NU/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="badge">Automatic</span>
-          <h3>Digital Water Timer</h3>
-          <p>Set schedules and forget—perfect for vacations.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B0DTDSZGGW/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B0DTDSZGGW/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="card">
+<h2>What You’ll Learn Here</h2>
+<ul>
+<li>Beginner-friendly gardening guides</li>
+<li>Tool education (what you need vs what you don’t)</li>
+<li>Watering and soil care basics</li>
+<li>Common mistakes that kill plants</li>
+</ul>
+</div>
 
-    <!-- COMPARISON TABLE -->
-    <section class="section">
-      <h2>Quick Comparison – Best Gardening Products</h2>
-      <div style="overflow-x:auto">
-        <table style="width:100%;border-collapse:collapse;background:#020617;border-radius:14px;overflow:hidden">
-          <thead style="background:#064e3b;color:#a7f3d0">
-            <tr>
-              <th style="padding:12px;text-align:left">Product</th>
-              <th style="padding:12px">Best For</th>
-              <th style="padding:12px">Why We Like It</th>
-              <th style="padding:12px">Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-top:1px solid #1f2937">
-              <td style="padding:12px">Fiskars Bypass Pruning Shears</td>
-              <td style="padding:12px;text-align:center">Pruning</td>
-              <td style="padding:12px">Sharp, durable, trusted brand</td>
-              <td style="padding:12px;text-align:center"><a class="buy" href="https://www.amazon.com/dp/B000HHOEZ8/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check on Amazon</a></td>
-            </tr>
-            <tr style="border-top:1px solid #1f2937">
-              <td style="padding:12px">Cooljob Garden Gloves</td>
-              <td style="padding:12px;text-align:center">Hand Protection</td>
-              <td style="padding:12px">Comfortable, breathable, great grip</td>
-              <td style="padding:12px;text-align:center"><a class="buy" href="https://www.amazon.com/dp/B083S71GXY/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check on Amazon</a></td>
-            </tr>
-            <tr style="border-top:1px solid #1f2937">
-              <td style="padding:12px">Stand‑Up Weed Puller</td>
-              <td style="padding:12px;text-align:center">Weeding</td>
-              <td style="padding:12px">No bending, back‑saving design</td>
-              <td style="padding:12px;text-align:center"><a class="buy" href="https://www.amazon.com/dp/B0DSFRMX81/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check on Amazon</a></td>
-            </tr>
-            <tr style="border-top:1px solid #1f2937">
-              <td style="padding:12px">Garden Hose Nozzle</td>
-              <td style="padding:12px;text-align:center">Watering</td>
-              <td style="padding:12px">Multiple spray modes, water‑saving</td>
-              <td style="padding:12px;text-align:center"><a class="buy" href="https://www.amazon.com/dp/B08QVK1GXV/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check on Amazon</a></td>
-            </tr>
-            <tr style="border-top:1px solid #1f2937">
-              <td style="padding:12px">Soil Moisture Meter</td>
-              <td style="padding:12px;text-align:center">Soil Care</td>
-              <td style="padding:12px">Prevents over‑watering</td>
-              <td style="padding:12px;text-align:center"><a class="buy" href="https://www.amazon.com/dp/B0DR8DGZD7/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check on Amazon</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+<div class="card">
+<h2>Start With Our Most Popular Guide</h2>
+<p>
+<a href="blog/best-gardening-tools-for-beginners.html">
+→ Best Gardening Tools for Beginners
+</a>
+</p>
+</div>
 
-    <!-- SOIL -->
-    <section id="soil" class="section">
-      <h2>Soil, Compost & Care</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="badge">Organic</span>
-          <h3>Compost Tumbler</h3>
-          <p>Faster composting with easy turning.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B0C7RDXZLQ/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B0C7RDXZLQ/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="badge">Accurate</span>
-          <h3>Soil Moisture Meter</h3>
-          <p>Know when to water—no batteries needed.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B0DR8DGZD7/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B0DR8DGZD7/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="badge">Boost Growth</span>
-          <h3>Organic Fertilizer</h3>
-          <p>Balanced nutrients for vegetables and flowers.</p>
-          <div class="actions">
-            <a class="buy" href="https://www.amazon.com/dp/B000OWDONO/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Check Price</a>
-            <a class="learn" href="https://www.amazon.com/dp/B000OWDONO/?tag=smartgarden06-20" target="_blank" rel="nofollow sponsored">Reviews</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<footer>
+<a href="about.html">About</a> •
+<a href="editorial-policy.html">Editorial Policy</a> •
+<a href="privacy-policy.html">Privacy Policy</a> •
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a><br><br>
+© 2025 Smart Gardening Picks
+</footer>
 
-    <!-- DISCLOSURE -->
-    <section id="disclosure" class="section">
-      <div class="disclosure">
-        <strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases. Prices and availability are subject to change. We only recommend products we believe add value.
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div>© 2025 Smart Gardening Picks</div>
-      <div><a href="#disclosure">Affiliate Disclosure</a> • <a href="#">Privacy</a></div>
-    </footer>
-  </div>
+</div>
 </body>
 </html>
