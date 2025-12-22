@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nesrinaburhanli-svg.github.io/smartgardening/sitemap.xml
